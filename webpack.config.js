@@ -19,6 +19,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /.jsx?$/,
+        enforce: 'pre',
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'libs'),
+          path.resolve(__dirname, 'dist'),
+          path.resolve(__dirname, 'database'),
+        ],
+        loader: 'eslint-loader',
+      },
+      {
         use: 'babel-loader',
         test: /\.js$/,
         exclude: /node_modules/
