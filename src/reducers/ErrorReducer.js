@@ -1,6 +1,6 @@
 import {
   CREATE_ERROR,
-  CLEAR_ERROR
+  CLEAR_ERROR,
 } from '../actions/types';
 
 export default (state = '', action) => {
